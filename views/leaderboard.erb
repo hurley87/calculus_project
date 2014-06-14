@@ -1,5 +1,6 @@
 <h1>Leaderboard</h1>
-
-<% @records.sort.each do |record| %>
+<% 
+	@records.sort! { |x,y| x.time <=> y.time }%>
+<% @records.each do |record| %>
 	<p><%= record.name %>  <%= record.time %></p>
 <% end %>
