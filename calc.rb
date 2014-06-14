@@ -13,6 +13,19 @@ end
 DataMapper.finalize
 DataMapper.auto_upgrade!
 
+class Questions
+	attr_accessor :questions, :answers
+	def initialize(q_arr, a_arr)
+		@questions = q_arr
+		@answers = a_arr
+	end
+	def pick_random
+		q_arr_length = @questions.size
+		rand_pick = rand(q_arr_length)
+		@questions.delete(@questions.index(rand_pick))
+		@questions[rand_pick]
+	end
+end
 
 file = File.open("questions.txt").read
 q_arr = []
@@ -28,15 +41,20 @@ end
 get '/' do
 	@questions = q_arr
 	@answers = a_arr
-	@rand_var = rand(@questions.length)
   erb :calculus
 end
 
 post '/' do
 	@record = Record.create(
-			:time => params[:time]
+			:time => params[:time],
+			:name => params[:name]
 		) 
-		redirect to('/')
+		redirect to('/leaderboard')
 end
 # database - record user and time
+
+get "/leaderboard" do
+	@records = Record.all
+	erb :leaderboard
+end
 

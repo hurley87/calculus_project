@@ -2,17 +2,33 @@
 <label id="seconds">00</label>:<label id="minutes">00</label>
 <input id="start" type='button' value='Start'/>
 <form action="/" method="post">
-	<div class="question">
-		<% rand_var = @rand_var %>
-		<h2><%= @questions[rand_var] %></h2>
-		<input type="text" id="q1" name="q1" required/>
+	<div class="name">
+		<label for="name">Name</label>
+		<input type="text" name="name" id="name"/>
+		<input id="timer" type="hidden" name="time"/> 
 	</div>
-	<div class="question">
-		<h2><%= @answers[rand_var] %></h2>
-		<input type="text" id="q2" name="q2" required>
-		<input id="timer" type="hidden" name="time" value="5"/> 
+	<div class="q1">
+		<h2><%=  @questions[0] %></h2>
+		<input type="text" id="q1" name="q1" />
 	</div>
-	<div id="answer">
+	<div class="q2">
+		<h2><%= @questions[1] %></h2>
+		<input type="text" id="q2" name="q2" >
+		
+	</div>
+	<div class="q3">
+		<h2><%= @questions[2]  %></h2>
+		<input type="text" id="q3" name="q3" >
+	</div>
+	<div class="q4">
+		<h2><%= @questions[3]%></h2>
+		<input type="text" id="q4" name="q4">
+	</div>
+	<div class="q5">
+		<h2><%= @questions[4] %></h2>
+		<input type="text" id="q5" name="q5">
+	</div>
+
 		<input id="submit" type="submit" value="Submit"/>
-	</div>
+
 </form>
