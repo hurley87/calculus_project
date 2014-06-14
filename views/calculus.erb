@@ -1,0 +1,18 @@
+<h1>Project</h1>
+<label id="seconds">00</label>:<label id="minutes">00</label>
+<input id="start" type='button' value='Start'/>
+<form action="/" method="post">
+	<div class="question">
+		<% rand_var = @rand_var %>
+		<h2><%= @questions[rand_var] %></h2>
+		<input type="text" id="q1" name="q1" required/>
+	</div>
+	<div class="question">
+		<h2><%= @answers[rand_var] %></h2>
+		<input type="text" id="q2" name="q2" required>
+		<input id="timer" type="hidden" name="time" value="5"/> 
+	</div>
+	<div id="answer">
+		<input id="submit" type="submit" value="Submit"/>
+	</div>
+</form>
