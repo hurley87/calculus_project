@@ -13,20 +13,6 @@ end
 DataMapper.finalize
 DataMapper.auto_upgrade!
 
-class Questions
-	attr_accessor :questions, :answers
-	def initialize(q_arr, a_arr)
-		@questions = q_arr
-		@answers = a_arr
-	end
-	def pick_random
-		q_arr_length = @questions.size
-		rand_pick = rand(q_arr_length)
-		@questions.delete(@questions.index(rand_pick))
-		@questions[rand_pick]
-	end
-end
-
 file = File.open("questions.txt").read
 q_arr = []
 a_arr = []

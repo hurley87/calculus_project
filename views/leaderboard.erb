@@ -1,5 +1,11 @@
-<h1>Leaderboard</h1>
-<% @records.sort! { |x,y| x.time <=> y.time }%>
-<% @records.each do |record| %>
-	<p><%= record.name %>  <%= record.time %></p>
-<% end %>
+
+<div class="center">
+	<a class="back_btn" href="/">Try Again</a>
+
+	<h1 class="title">Leaderboard</h1>
+			<% @records.sort! { |x,y| x.time <=> y.time }%>
+			<% @records.each do |record| %>
+		 	<p class="box"><%= record.name %> : <%= record.time %></p>
+	<% end %>
+<a class="back_btn" href="/">Try Again</a>
+</div>
