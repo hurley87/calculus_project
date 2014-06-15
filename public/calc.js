@@ -31,6 +31,7 @@ $(document).ready(function() {
  		$('.q5').hide();
  		$('#stopwatch').hide();
  		$('.submit_div').hide();
+ 		$('#submit').attr('disabled', 'disabled');
 
  		// focus cursor on name and show timers when user enters name
  		$('#name').focus();
@@ -98,9 +99,9 @@ $(document).ready(function() {
 						$('.q5').hide(2000);
 						$("#question_number").text("-");
 						$('#stopwatch').hide(2000);
-						$('#calc_form').submit();
+						$('.submit_div').show(1000);
+						$('#submit').removeAttr('disabled');
 				}
-				
 		});	
 
 		// function correct_answer(num, solution) {
@@ -123,7 +124,7 @@ $(document).ready(function() {
 					$('#timer').val(totalSeconds);
  		});	
  		
- 		$('#submit').attr('disabled', 'disabled');
+ 		
 
 		
 

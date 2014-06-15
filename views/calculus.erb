@@ -1,4 +1,5 @@
 
+
 <div class="box" id="stopwatch">
 	<div class="clock">
 		<span id="seconds">00</span>:<span id="minutes">00</span><span id="question_number">5</span>
@@ -6,7 +7,7 @@
 	<input id="start" type='button' value='Start'/>
 </div>
 
-<form  id="calc_form" action="/" method="post" >
+<form action="/" method="post" id="calc_form">
 
 	<div class="name box">
 		<label for="name">Name</label>
@@ -44,5 +45,11 @@
 		<input type="text" id="q5" name="q5">
 	</div>
 
+	<div class="submit_div">
+		<p style="text-align: center;"><input id="submit" type="submit" value="Submit Your Time"/></p>
+	</div>
 
 </form>
+<% if @records[0].time %>
+	<h3 class="back_btn">Time to beat: <%= @records[0].time %></h3>
+<% end %>	

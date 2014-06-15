@@ -27,6 +27,8 @@ end
 get '/' do
 	@questions = q_arr
 	@answers = a_arr
+	@records = Record.all
+	p @records
   erb :calculus
 end
 
@@ -41,7 +43,6 @@ end
 
 get "/leaderboard" do
 	@records = Record.all
-	p @records
 	erb :leaderboard
 end
 
