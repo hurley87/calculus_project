@@ -48,13 +48,14 @@ post '/' do
 	@record = Record.create(
 			:time => params[:time],
 			:name => params[:name]
-		) 
+		)
 		redirect to('/leaderboard')
 end
 # database - record user and time
 
 get "/leaderboard" do
 	@records = Record.all
+	p @records
 	erb :leaderboard
 end
 

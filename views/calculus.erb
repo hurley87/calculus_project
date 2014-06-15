@@ -6,7 +6,7 @@
 	<input id="start" type='button' value='Start'/>
 </div>
 
-<form action="/" method="post" id="calc_form">
+<form  id="calc_form" action="/" method="post" >
 
 	<div class="name box">
 		<label for="name">Name</label>
@@ -15,30 +15,34 @@
 	</div>
 
 	<div class="q1 box">
+		<span class="red"></span>
 		<h2><%=  @questions[0] %></h2>
 		<input type="text" id="q1" name="q1" />
 	</div>
 
 	<div class="q2 box">
+		<span class="red"></span>
 		<h2><%= @questions[1] %></h2>
 		<input type="text" id="q2" name="q2" >
 	</div>
 
 	<div class="q3 box">
+		<span class="red"></span>
 		<h2><%= @questions[2]  %></h2>
 		<input type="text" id="q3" name="q3" >
 	</div>
 
 	<div class="q4 box">
+		<span class="red"></span>
 		<h2><%= @questions[3]%></h2>
 		<input type="text" id="q4" name="q4">
 	</div>
 
 	<div class="q5 box">
+		<span class="red"></span>
 		<h2><%= @questions[4] %></h2>
 		<input type="text" id="q5" name="q5">
 	</div>
 
-		<input id="submit" type="submit" value="Submit"/>
 
 </form>
