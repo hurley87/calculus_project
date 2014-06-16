@@ -28,7 +28,6 @@ get '/' do
 	@questions = q_arr
 	@answers = a_arr
 	@records = Record.all
-	p @records
   erb :calculus
 end
 

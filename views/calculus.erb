@@ -50,6 +50,7 @@
 	</div>
 
 </form>
+<% @records.sort! { |x,y| x.time <=> y.time }%>
 <% if @records[0].time %>
-	<h3 class="back_btn">Time to beat: <%= @records[0].time %></h3>
+	<h3 class=" center back_btn">Time to beat: <%= @records[0].time %></h3>
 <% end %>	
