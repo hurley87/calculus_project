@@ -104,18 +104,7 @@ $(document).ready(function() {
 				}
 		});	
 
-		// function correct_answer(num, solution) {
-
-		// 	$("#q2").on('input', function() {
-		// 		if ($(this).val() == "6x^2 + 8x + 3") {
-		// 				$('.q2 .red').css({"background-color":  "#2ECC71"});
-		// 				$('.q2').hide(2000);
-		// 				$('.q3').show(1000);
-		// 				$('#q3').focus();
-		// 		}
-		// });	
-
-		// }
+     
 		
 
 
