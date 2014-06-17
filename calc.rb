@@ -28,6 +28,7 @@ get '/' do
 	@questions = q_arr
 	@answers = a_arr
 	@records = Record.all
+	@random_questions = [['q1', 'a1']]
   erb :calculus
 end
 

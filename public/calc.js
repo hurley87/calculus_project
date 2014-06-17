@@ -22,7 +22,6 @@
 
 
 $(document).ready(function() {
-
 		// hide everything off the start
 		$('.q1').hide();
  		$('.q2').hide(); 

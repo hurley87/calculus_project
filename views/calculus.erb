@@ -54,3 +54,9 @@
 <% if @records[0].time %>
 	<h3 class=" center back_btn">Time to beat: <%= @records[0].time %></h3>
 <% end %>	
+
+<script>
+		<% @random_questions.each_with_index do |question, index| %>
+			var question<%=index %> = ['<%= question[0] %>', '<%= question[1] %>'];
+		<% end %>
+</script>
